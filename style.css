@@ -1,0 +1,139 @@
+--css fil för slutporjektet
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+#gameframe{
+    position: relative;
+    height: 600px;
+    width: 800px;
+    margin: auto;
+    background-color: darkslateblue;
+}
+
+.enemy{
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    bottom: 0px;
+    background-color: #E5C8A5;
+    border-radius: 10px 10px 0 0;
+}
+
+#eyes{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: black;
+    top: 120px;
+}
+
+.lefteye{
+    left: 20px;
+}
+
+.righteye{
+    right: 20px;
+}
+
+.hat{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+    background-color: black;
+
+}
+
+.board{
+    position: absolute;
+    width: 180px;
+    height: 20px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.jacket{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    top: 170px;
+    background-color: #212121;
+}
+
+.zipper{
+    position: absolute;
+    width: 10px;
+    height: 180px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: grey;
+}
+
+.shoes{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: #590000;
+    bottom: 0;
+}
+
+.gun{
+    position: absolute;
+    height: 60px;
+    width: 30px;
+    right: 0px;
+    top: 190px;
+    background-color: #53565A;
+    border-radius: 10px 10px 0 0;
+}
+
+.pipe{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 7px;
+}
+
+.line{
+    position: absolute;
+    width: 30px;
+    height: 7px;
+    top: 30px;
+    background-color: black;
+}
+
+.enemy.dead{
+    height: 50px;
+    background-color: #590000;
+}
+#enemy1{
+    left: 5px;
+}
+#enemy2{
+    left: 165px;
+}
+#enemy3{
+    left: 325px;
+}
+#enemy4{
+    left: 485px;
+}
+#enemy5{
+    left: 645px;
+}
