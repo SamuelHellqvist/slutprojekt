@@ -9,6 +9,8 @@
 </head>
 <body>
     <div id="gameframe">
+        <div id="healthBar"></div>
+
         <div class="enemy" id="enemy1" onclick="iShoot(this)">
             <div class="lefteye" id="eyes"></div>
             <div class="righteye" id="eyes"></div>
@@ -19,9 +21,9 @@
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
-            <div class="gun">
-                <div class="pipe"></div>
+            <div class="gun" id="guns">
                 <div class="line"></div>
+                <div class="pipe" id="pipes"></div>
             </div>
         </div>
 
@@ -36,9 +38,9 @@
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
-            <div class="gun">
-                <div class="pipe"></div>
+            <div class="gun" id="guns">
                 <div class="line"></div>
+                <div class="pipe" id="pipes"></div>
             </div>
         </div>
 
@@ -53,9 +55,9 @@
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
-            <div class="gun">
-                <div class="pipe"></div>
+            <div class="gun" id="guns">
                 <div class="line"></div>
+                <div class="pipe" id="pipes"></div>
             </div>
         </div>
 
@@ -70,11 +72,11 @@
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
-            <div class="gun">
-                <div class="pipe"></div>
+            <div class="gun" id="guns">
                 <div class="line"></div>
+                <div class="pipe" id="pipes"></div>
             </div>
-    </div>
+        </div>
 
         <div class="enemy" id="enemy5" onclick="iShoot(this)">
         <div class="lefteye" id="eyes"></div>
@@ -87,13 +89,18 @@
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
-            <div class="gun">
-                <div class="pipe"></div>
+            <div class="gun" id="guns">
                 <div class="line"></div>
-            </div>
+                <div class="pipe" id="pipes"></div>
             </div>
         </div>
 
+    </div>
+
+    <button onclick="randomEnemyAttacks()" id="startbtn">START GAME</button>
+    <div id="highscores">
+        <div id="header"><h1>Leaderboard</h1></div>
+    </div>
     <script src='script.js'></script>
 </body>
 </html>
