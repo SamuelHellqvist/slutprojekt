@@ -8,10 +8,11 @@ button:hover{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 body{
-    background-color: black;
+    background-color: #000033;
     overflow: hidden;
 }
 
@@ -171,17 +172,28 @@ body{
 }
 
 #startbtn{
+    font-family: monospace;
     position: absolute;
-    top: 20%;
-    left: 1%;
+    left: 42%;
+    top: 45%;
     height: 80px;
     width: 200px;
-    font-family: monospace;
     font-size: 2rem;
     border-radius: 20px;
     background-color: skyblue;
 }
 
+#choosemapbtn{
+    position: absolute;
+    left: 42%;
+    top: 70%;
+    height: 60px;
+    width: 200px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: lightgoldenrodyellow;
+}
+  
 #highscores{
     position: absolute;
     top: 5%;
@@ -198,3 +210,41 @@ body{
     text-decoration: underline;
     margin-top: 1rem;
 }
+
+form{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    left: 1%;
+    top: 20%;
+}
+#submitbtn{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    left: 0%;
+    border-radius: 10px;
+    font-size: 2rem;
+    background-color: lightgreen;
+}
+
+#nickname{
+    position: absolute;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    background-color: skyblue;
+}
+
+@keyframes jump {
+    0%  {transform: translateY(-10%);}
+    50% {transform: translateY(10%);}
+
+  }
+  .jump {
+    animation: jump 1.5s linear alternate infinite;
+  }
+
+  button:hover{
+    cursor: pointer;
+} 

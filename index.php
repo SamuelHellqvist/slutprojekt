@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+    $dbserver="localhost";
+    $dbuser="root";
+    $dbpass="";
+    $dbname="candy";
+    $conn=mysqli_connect($dbserver, $dbuser, $dbpass, $dbname);
+    
+    if (isset($_POST['btn'])){
+            $tag=$_POST['nick'];
+            $sql="INSERT INTO tbl_players (tag) VALUES ('$tag')";
+            mysqli_query($conn, $sql);
+    }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +21,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <form method="post" action="index.php">
+        <input type="text" name="nick" id="nickname"placeholder="nickname">
+        <input type="submit" name="btn" value="save" id="submitbtn" onlclick="showstart()">
+    </form>
+
+    <button onclick="showstart()">testa</button>
+    </div>
     <div id="gameframe">
         <div id="healthBar"></div>
 
@@ -97,7 +118,8 @@
 
     </div>
 
-    <button onclick="randomEnemyAttacks()" id="startbtn">START GAME</button>
+    <button onclick="randomEnemyAttacks(), showstart()" id="startbtn" class="jump">START GAME</button>
+    <button id="choosemapbtn">CHOOSE LOCATION</button>
     <div id="highscores">
         <div id="header"><h1>Leaderboard</h1></div>
     </div>
