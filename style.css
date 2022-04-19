@@ -169,6 +169,7 @@ body{
     background-color: #97be11;
     top: 0;
     transition: width 0.5s;
+    opacity: 0%;
 }
 
 #startbtn{
@@ -185,13 +186,24 @@ body{
 
 #choosemapbtn{
     position: absolute;
-    left: 42%;
-    top: 70%;
+    left: 19%;
+    top: 15%;
     height: 60px;
     width: 200px;
     font-size: 1.5rem;
     border-radius: 20px;
     background-color: lightgoldenrodyellow;
+}
+
+#choosemapbtn2{
+    position: absolute;
+    left: -100%;
+    top: 15%;
+    height: 60px;
+    width: 200px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: coral;
 }
   
 #highscores{
@@ -248,3 +260,17 @@ form{
   button:hover{
     cursor: pointer;
 } 
+
+#locationtxt{
+    position: absolute;
+    height: 60px;
+    width: 150px;
+    background-color: #e66465;
+    top: 0%;
+    left: 0%;
+    padding: 0px 10px 10px 10px;
+}
+
+.alien{
+    background-color: green;
+}

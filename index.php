@@ -32,13 +32,18 @@
     <div id="gameframe">
         <div id="healthBar"></div>
 
+        <div id="locationtxt">
+        <h1>Location:</h1>
+        <h1 id="indi">ITALY</h1>
+        </div>
+
         <div class="enemy" id="enemy1" onclick="iShoot(this)">
             <div class="lefteye" id="eyes"></div>
             <div class="righteye" id="eyes"></div>
             <div class="hat">
                 <div class="board"></div>
             </div>
-            <div class="jacket">
+            <div class="jacket" id="jacket">
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
@@ -55,7 +60,7 @@
                 <div class="board">
                 </div>
             </div>
-            <div class="jacket">
+            <div class="jacket" id="jacket">
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
@@ -72,7 +77,7 @@
                 <div class="board">
                 </div>
             </div>
-            <div class="jacket">
+            <div class="jacket" id="jacket">
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
@@ -89,7 +94,7 @@
                 <div class="board">
                 </div>
             </div>
-            <div class="jacket">
+            <div class="jacket" id="jacket">
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
@@ -106,7 +111,7 @@
                 <div class="board">
                 </div>
             </div>
-            <div class="jacket">
+            <div class="jacket" id="jacket">
                 <div class="zipper"></div>
             </div>
             <div class="shoes"></div>
@@ -119,7 +124,8 @@
     </div>
 
     <button onclick="randomEnemyAttacks(), showstart()" id="startbtn" class="jump">START GAME</button>
-    <button id="choosemapbtn">CHOOSE LOCATION</button>
+    <button id="choosemapbtn" onclick="x()">CHANGE LOCATION</button>
+    <button id="choosemapbtn2" onclick="y()">CHANGE LOCATION</button>
     <div id="highscores">
         <div id="header"><h1>Leaderboard</h1></div>
     </div>
