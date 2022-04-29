@@ -303,9 +303,11 @@ form{
     position: absolute;
 }
 
-#nickholder{
+.list{
     /* color: lime; */
-    /* background-color: coral; */
-    position: relative;
+    /*background-color: coral;*/
+    position: absolute;
     height: 100%;
+    text-align: center;
+    width: 100%;
 }
