@@ -1,5 +1,6 @@
 --css fil för slutporjektet
 
+
 button:hover{
     cursor: pointer;
 }
@@ -9,6 +10,7 @@ button:hover{
     margin: 0;
     box-sizing: border-box;
     font-family: monospace;
+    --aliengreen: "#ccff8c";
 }
 
 body{
@@ -49,7 +51,7 @@ body{
     background-color: red;
 }
 
-.enemy.shooting #guns #pipes{
+.enemy.shooting .gun #pipes{
     background-color: red;
     height: 40px;
     width: 40px;
@@ -273,4 +275,37 @@ form{
 
 .alien{
     background-color: green;
+}
+
+.green{
+    background-color: #97be11;
+}
+
+.reklam{
+    position: absolute;
+    width: 20%;
+    color: blueviolet;
+    top: 50%;
+    background-color: white;
+}
+
+.reklam a{
+    font-size: 0.9rem;
+}
+
+.reklam p{
+    color: yellow;
+    background-color: blue;
+}
+
+.list{
+    color: white;
+    position: absolute;
+}
+
+#nickholder{
+    /* color: lime; */
+    /* background-color: coral; */
+    position: relative;
+    height: 100%;
 }
