@@ -149,7 +149,7 @@
         
         </div>
     </div>
-
+    <div id="pointsindi"><h1>0</h1></div>
     <script src='script.js'></script>
 </body>
 </html>

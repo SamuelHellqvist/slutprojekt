@@ -9,7 +9,7 @@ function test(){
 }
 var enemy = document.querySelectorAll(".enemy");
 
-var timea = 3000;
+var timea = 0;
 
 var healthPoints = 100;
 
@@ -65,6 +65,18 @@ function randomEnemyAttacks() {
 	var randomEnemyNo = Math.random() * livingEnemies().length;
 	randomEnemyNo = Math.floor(randomEnemyNo);
 	var enemy = livingEnemies()[randomEnemyNo];
+
+var pointsindi = document.querySelector('#pointsindi');
+var points = (healthPoints*100) / livingEnemies().length;
+var newpoints = points.round()
+    setTimeout( ()=> {
+        timea++;
+        console.log(newpoints);
+        // showpoints(pointsindi);
+        pointsindi.innerHTML = points;
+        {
+        }
+    }, 1000)
 
 	var randomDelay = Math.random() * 2000 + 1000;
 
@@ -184,4 +196,11 @@ var board2 = document.querySelector("#board2");
 var board3 = document.querySelector("#board3");
 var board4 = document.querySelector("#board4");
 var board5 = document.querySelector("#board5");
+
+var points = timea * healthPoints;
+var pointsindi = document.querySelector('#pointsindi');
+
+function showpoints(pointsindi){
+    pointsindi.innerHTML = points;
+}
 test();

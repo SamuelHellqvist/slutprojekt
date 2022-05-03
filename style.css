@@ -15,7 +15,7 @@ button:hover{
 
 body{
     background-color: #000033;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #gameframe{
@@ -310,4 +310,10 @@ form{
     height: 100%;
     text-align: center;
     width: 100%;
+}
+
+#pointsindi{
+    position: absolute;
+    background-color: lime;
+    top: 0;
 }
