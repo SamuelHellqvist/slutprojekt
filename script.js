@@ -68,10 +68,10 @@ function randomEnemyAttacks() {
 
 var pointsindi = document.querySelector('#pointsindi');
 var points = (healthPoints*100) / livingEnemies().length;
-var newpoints = points.round()
+points = Math.round(points);
     setTimeout( ()=> {
         timea++;
-        console.log(newpoints);
+        console.log(points);
         // showpoints(pointsindi);
         pointsindi.innerHTML = points;
         {

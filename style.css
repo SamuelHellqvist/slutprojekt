@@ -312,8 +312,14 @@ form{
     width: 100%;
 }
 
-#pointsindi{
+#score{
     position: absolute;
     background-color: lime;
     top: 0;
+}
+
+#pointsindi{
+    position: absolute;
+    background-color: lime;
+    top: 4%;
 }
