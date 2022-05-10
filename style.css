@@ -315,11 +315,28 @@ form{
 #score{
     position: absolute;
     background-color: lime;
-    top: 0;
+    top: 10%;
+    right: 0;
 }
 
 #pointsindi{
     position: absolute;
     background-color: lime;
-    top: 4%;
+    top: 14%;
+    right: 0;
+}
+
+#boss{
+    color: white;
+    position: absolute;
+    top: 60%;
+    width: 200px;
+    text-align: center;
+    background-color: crimson;
+    left: 10px;
+}
+
+#boss a{
+    font-size: 1.4rem;
+    margin-top: 10px;
 }

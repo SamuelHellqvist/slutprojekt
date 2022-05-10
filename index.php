@@ -31,6 +31,10 @@
         <a href="https://www.dinmamma.se/">Klicka här för att chatta med henne</a>
         <p>provided by Swedish Fika Kamrater ltd.</p>
     </div>-->
+    <div id="boss">
+        <h1>Are you ready for a boss fight?</h1>
+        <a href="boss.php">Enter the boss room</a>
+    </div>
     <form method="post" action="index.php">
         <input type="text" name="nick" id="nickname"placeholder="nickname">
         <input type="submit" name="btn" value="save" id="submitbtn" onlclick="showstart()">
@@ -38,6 +42,8 @@
 
     </div>
     <div id="gameframe">
+        <div id="score">SCORE: </div>
+        <div id="pointsindi"><h1>0</h1></div>
         <div id="healthBar"></div>
 
         <div id="locationtxt">
@@ -149,8 +155,6 @@
         
         </div>
     </div>
-    <div id="score">SCORE: </div>
-    <div id="pointsindi"><h1>0</h1></div>
     <script src='script.js'></script>
 </body>
 </html>
