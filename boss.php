@@ -9,15 +9,20 @@
 </head>
 <body>
     <div id="gameframe">
-        <div id="boss" class="jel" onclick="shotonboss(this)">
+        <div id="boss" class="jel" onclick="bosstakedmg()">
             <!-- <div id="eye"></div> -->
         </div>
-        <button onclick="start()">START</button>
+        <button onclick="tp()">START</button>
         <button onclick="stop()">STOP</button>
     </div>
+
     <div id="bosshpbar">
         <div id="bosshpfiller"></div>
     </div>
-    <script  src='y.js' ></script>
+
+    <div id="playerhpbar">
+        <div id="playerhpfiller"></div>
+    </div>
+    <script  src='x.js' ></script>
 </body>
 </html>

@@ -31,6 +31,9 @@
         <a href="https://www.dinmamma.se/">Klicka här för att chatta med henne</a>
         <p>provided by Swedish Fika Kamrater ltd.</p>
     </div>-->
+    <iframe frameborder="0" src="https://itch.io/embed/1462357" width="230" height="100">
+        <a href="https://novcat-studios.itch.io/cats-trife%22%3ECats" Trife: Beasts of Pestilence by NovCat</a>
+    </iframe>
     <div id="boss">
         <h1>Are you ready for a boss fight?</h1>
         <a href="boss.php">Enter the boss room</a>

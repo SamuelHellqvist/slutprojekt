@@ -4,6 +4,7 @@ var bosshp = "100";
 var playerhp = "100";
 var randomx = 75 * Math.random() * Math.random();
 var randomy = 75 * Math.random() * Math.random();
+var flag = "0";
 // var bosshpbar = document.getElementById('bosshpbar');
 // var left = 0
 // var timer = setInterval(() => {
@@ -21,54 +22,14 @@ function move(randomy) {
 function move2(randomx){
     boss.style.left = randomx + "%";
 }
+
 function bosshealth(){
     bosshp = bosshp-10;
-    // var healthbar = document.querySelector("#healthBar");
-    // healthbar.style.width = bosshp + "%";
-
     if(bosshp < 1){
         alert("You defeated the Ultra Lethal Demon Overlord Teleportia!");
-        console.log(playerhp)
+        console.log(playerhp);
         window.location.reload();
     }
-}
-
-function ghost(){
-     boss.style.backgroundColor = "red";
-    setTimeout(() =>{
-        boss.style.opacity = "0";
-    }, 1000);
-    setTimeout( () =>{
-        boss.style.opacity = "100%";
-        bossattack();
-        console.log("ghost?");
-    }, 1000);
-}
-
-function bossattack(){
-    boss.style.backgroundColor = "green";
-    console.log("Boss just shot you!");
-    playerhp = playerhp-2;
-    // console.log(playerhp)
-
-}
-function bossmovement(){
-    ghost()
-    setTimeout( () =>{
-        move(randomy);
-        move2(randomx);
-        randomy = 75 * Math.random();
-        randomx = 75 * Math.random();
-        bossmovement();
-    }, 3000);
-}
-
-function shotonboss(){
-    console.log("you shot the boss, holy cow");
-    bosshealth();
-    // console.log(bosshp);
-    updatebosshealth();
-    bossgothit();
 }
 
 function updatebosshealth(){
@@ -76,18 +37,98 @@ function updatebosshealth(){
     console.log("updating health");
     bosshpbar.style.height = bosshp + "%";
 }
-function start(){
-    bossmovement()
+
+function updateplayerhealth(){
+    var playerhpbar = document.getElementById('playerhpfiller');
+    console.log("updating health");
+    playerhpbar.style.height = playerhp + "%";
 }
-function stop(){
-    window.location.reload()
+
+function shotonboss(){
+    // healplayerhp();
+    flag--;
+    flag--;
+    tp();
+    console.log("you shot the boss, holy cow");
+    bosshealth();
+    updatebosshealth();
+    console.log(flag);
+    // playerhp = playerhp+5;
+    // if (flag = "0"){
+        // flag++;
+    // }
 }
-// updatebosshealth();
-function bossgothit(){
+
+function tp(){
     boss.style.opacity = "0";
-    setTimeout(() =>{
-        playerhp++;
-        console.log("Updating health")
-        boss.style.opacity = "100%"
-    }, 2000)
+    var randomx = 100 * Math.random();
+    var randomy = 100 * Math.random();
+    console.log("TELEPORT");
+    setTimeout(() => {
+        move(randomy);
+        move2(randomx);
+        boss.style.opacity = "100%";
+    }, 3000);
+    console.log("flag = ", flag);
+}
+
+function bossattack(){
+    console.log("Boss just shot you!");
+    playerhp = playerhp-10;
+    // bossshooting();
+    console.log(playerhp);
+    updateplayerhealth();
+    if (playerhp < 1){
+        alert("You died!");
+        window.location.reload();
+    }
+    // console.log(playerhp);
+
+}
+function bossmovement(){
+    // boss.style.backgroundColor = "red";
+    // var randomx = 100 * Math.random();
+    // var randomy = 100 * Math.random();
+    if (flag == 1){
+        tp();
+        // setTimeout( () =>{
+            
+        //     move(randomy);
+        //     move2(randomx);
+        //     bossattack();
+        //     bossmovement();
+        // }, 500);
+        bossattack();
+        tp();
+    }
+    if (flag == 0){
+        console.log("trying my best");
+        boss.style.opacity = "0";
+        bossmovement;
+        setTimeout( () =>{
+            console.log("IT WILL RETURN");
+            start();
+        }, 500);
+    }
+}
+
+function start(){
+    boss.style.opacity = "100%"
+    flag++;
+    console.log(flag);
+    battlestart();
+}
+
+function stop(){
+    console.log("stop");
+    window.location.reload();
+}
+
+function battlestart(){
+    if (flag == 1){
+        bossmovement();
+    }
+    if (flag == 0){
+        console.log("Boss will not move");
+    }
 }
