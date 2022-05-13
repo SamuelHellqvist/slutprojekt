@@ -8,11 +8,13 @@ function test(){
     console.log(enemy);
 }
 var enemy = document.querySelectorAll(".enemy");
+var score = document.querySelector("#score");
 
 var timea = 0;
 
 var healthPoints = 100;
 
+// uppdaterar spelarens hp genom att sätta storleken på en mätare till hur många % hp man har
 function updateHealthPoints(points){
     healthPoints = points;
     var healthbar = document.querySelector("#healthBar");
@@ -25,6 +27,7 @@ function updateHealthPoints(points){
 
 }
 
+// ishoot är fiendernas onclick, träffas dem "dör" dem genom att classen "dead" läggs till. 
 function iShoot(enemy){
     enemy.classList.add("dead");
     console.log("enemy got shot");
@@ -35,6 +38,7 @@ function iShoot(enemy){
     }
 }
 
+// fienderna sjuter genom att de får en klass som gör att de syns sjuter
 function enemyAttacksMe(enemy){
     enemy.classList.add("showing");
     setTimeout( ()=>{
@@ -45,6 +49,7 @@ function enemyAttacksMe(enemy){
     }, 3000);
 }
 
+// om fienden inte är dead så kan den sjuta och då minskar hp med 20
 function enemyShootsMe(enemy){
     if(!enemy.classList.contains("dead")){
         enemy.classList.add("shooting");
@@ -60,6 +65,7 @@ function livingEnemies(){
     return document.querySelectorAll(".enemy:not(.dead)");
 }
 
+// en slumpmässig fiende attackerar genom att en fiende vals av listan
 function randomEnemyAttacks() {
     console.log(" random enemy about to attack!");
 	var randomEnemyNo = Math.random() * livingEnemies().length;
@@ -68,6 +74,8 @@ function randomEnemyAttacks() {
 
 var pointsindi = document.querySelector('#pointsindi');
 var points = (healthPoints*100) / livingEnemies().length;
+
+// man får mer points desto mer tid det går och på tiden läggs det till 1 per sekund
 points = Math.round(points);
     setTimeout( ()=> {
         timea++;
@@ -95,6 +103,7 @@ function aliens(enemy){
     console.log("hello world!")
 }
 
+// när man klickar start så göms allting som inte ska finnas
 function showstart(){
     console.log("Testing");
     var startbtn = document.querySelector("#startbtn");
@@ -108,7 +117,11 @@ function showstart(){
     mapbtn2.style.left = "-100%";
     hpbar.style.opacity = "100%";
     location.style.top = "5%";
+    pointsindi.style.opacity = "100%";
+    score.style.opacity = "100%";
 
+    // hush påverkas av "change location" knappen och påverkar sedan bakgrunden och fiendernas utseende.
+    // på så vis får man två "maps"
     var gameframe = document.querySelector("#gameframe");
     if (hush == 1){
         gameframe.style.backgroundImage= "url('https://www.itl.cat/pngfile/big/208-2085186_italy-sicily.jpg')";

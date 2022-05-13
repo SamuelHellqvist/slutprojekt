@@ -50,8 +50,8 @@
         <div id="healthBar"></div>
 
         <div id="locationtxt">
-        <h1>Location:</h1>
-        <h1 id="indi">ITALY</h1>
+            <h1>Location:</h1>
+            <h1 id="indi">ITALY</h1>
         </div>
 
         <div class="enemy" id="enemy1" id="foes" onclick="iShoot(this)">

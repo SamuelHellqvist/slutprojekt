@@ -3,18 +3,31 @@ body{
     background-color: #000033;
 }
 
+*{
+    font-family: monospace;
+}
+
 #boss {
     position: absolute;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     line-height: 100px;
-    background: crimson;
+    background: #ec0000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+#eye{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #gameframe{
     position: relative;
     height: 600px;
@@ -55,6 +68,47 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: green;
+    background-color: #97be11;
     bottom: 0;
+}
+
+#bosstext{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    height: 20px;
+    width: 90px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#playertext{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    height: 20px;
+    width: 90px;
+    background-color: #97be11;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#goback{
+    color: white;
+    position: absolute;
+    top: 85%;
+    width: 200px;
+    text-align: center;
+    background-color: whitesmoke;
+    left: 10px;
+}
+
+#eye{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: yellow;
 }
