@@ -250,6 +250,15 @@ form{
     background-color: skyblue;
 }
 
+#playerscore{
+    position: absolute;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    background-color: skyblue;
+    top: 120%;
+}
+
 @keyframes jump {
     0%  {transform: translateY(-10%);}
     50% {transform: translateY(10%);}

@@ -24,6 +24,7 @@ body{
     height: 50%;
     width: 50%;
     background-color: green;
+    color: green;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

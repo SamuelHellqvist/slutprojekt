@@ -8,7 +8,8 @@
     
     if (isset($_POST['btn'])){
             $tag=$_POST['nick'];
-            $sql="INSERT INTO tbl_players (tag) VALUES ('$tag')";
+            $score=$_POST['score'];
+            $sql="INSERT INTO tbl_players (tag, score) VALUES ('$tag', '$score')";
             mysqli_query($conn, $sql);
     }
 ?>
@@ -40,6 +41,7 @@
     </div>
     <form method="post" action="index.php">
         <input type="text" name="nick" id="nickname"placeholder="nickname">
+        <input type="hidden" name="scores" id="playerscore" placeholder = "score">
         <input type="submit" name="btn" value="save" id="submitbtn" onlclick="showstart()">
     </form>
 
@@ -145,7 +147,7 @@
     <button id="choosemapbtn2" onclick="y()">CHANGE LOCATION</button>
 
     <div id="highscores">
-        <div id="header"><h1>Leaderboard</h1></div>
+        <div id="header"><h1>Recent player: </h1></div>
         <div id="nickholder">
     
         <div class="list">
