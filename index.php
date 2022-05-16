@@ -8,8 +8,7 @@
     
     if (isset($_POST['btn'])){
             $tag=$_POST['nick'];
-            $score=$_POST['score'];
-            $sql="INSERT INTO tbl_players (tag, score) VALUES ('$tag', '$score')";
+            $sql="INSERT INTO tbl_players (tag, score) VALUES ('$tag')";
             mysqli_query($conn, $sql);
     }
 ?>

@@ -215,8 +215,5 @@ var pointsindi = document.querySelector('#pointsindi');
 
 function showpoints(pointsindi){
     pointsindi.innerHTML = points;
-    var playerscore = document.querySelector("#playerscore");
-    playerscore.innerHTML = score;
-    console.log(playerscore.innerHTML);
 }
 test();
